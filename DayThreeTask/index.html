@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Montserrat", serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
+        .heading {
+            text-align: center;
+        }
+        .forms-container {
+            position: absolute;
+            top: 15%;
+            left: 33%;
+        }
+        .form-width {
+            width: 65%;
+        }
+        table, th, td {
+            text-align: start;
+            width: 30%;
+            height: 130%;
+            border-collapse: collapse;
+        }
+        button {
+            position: absolute;
+            top: 110%;
+            left: 22%;
+            width: 25%;
+        }
+        button:hover {
+            color: white;
+            background: #413e3e;
+        }
+        input {
+            width: 150%;
+            height: 130%;
+        }
+
+        .Table-container {
+            margin-left: 350px;
+            margin-top:  250px;
+        }
+
+        #empname {
+            background-color: #FFFDD0;
+            color: rgb(20, 13, 13);
+            font-size: 18px;
+            padding-left: 30px;
+            padding-right: 30px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        #taskdet {
+            background-color: #FFFDD0;
+            color: rgb(20, 13, 13);
+            font-size: 18px;
+            padding: 10px;
+            padding-left: 50px;
+            padding-right: 50px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        #tasktitle {
+            background-color: #FFFDD0;
+            color: rgb(20, 13, 13);
+            font-size: 16px;
+            padding: 8px;
+            padding-left: 50px;
+            padding-right: 50px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        #taskdes {
+            background-color: #FFFDD0;
+            color: rgb(20, 13, 13);
+            font-size: 16px;
+            padding: 8px;
+            padding-left: 50px;
+            padding-right: 50px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+    #duedate {
+        background-color: #FFFDD0;
+            color: rgb(20, 13, 13);
+            font-size: 16px;
+            border: 1px solid #ccc;
+            text-align: center;
+            padding-left: 50px;
+            padding-right: 50px;
+    }
+
+        .new-row {
+            background-color: #FFFDD0; 
+            color: #0d0f0d;
+            text-align: center;
+        }
+
+        .new-row td {
+            padding: 12px;
+            border: 1px solid #c3e6cb;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="heading">
+        <h1>Employee Task Tracker</h1>
+    </div>
+    <div class="forms-container">
+        <table class="form-width">
+            <tr>
+                <th><label for="Emp_name">EMPLOYEE NAME</label></th>
+                <td><input type="text" name="Emp_name" id="Emp_name" title="EmpName" placeholder="Enter Valid Name" required><br></td>
+            </tr>
+            <tr>
+                <th><label for="Task_title">TASK TITLE</label></th>
+                <td><input type="text" name="Task_title" id="Task_title" title="Task_title" placeholder="Enter valid Title for Task" required><br></td>
+            </tr>
+            <tr>
+                <th><label for="Task_Desc">TASK DESCRIPTION</label></th>
+                <td><input type="text" rows="3" cols="40" name="Task_Desc" id="Task_Desc" placeholder="Enter Task Description" required><br></td>
+            </tr>
+            <tr>
+                <th><label for="date" style="width: 100%;">DUE DATE</label></th>
+                <td><input type="date" name="date" id="date" placeholder="Enter Deadline Date" title="Due date" required> </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="button" id="btn-assign" onclick="AddDetails()">ASSIGN TASK</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="Table-container">
+        <table id="taskTable">
+            <tr>
+                <th rowspan="2" id="empname">EMPLOYEE NAME</th>
+                <th colspan="2" id="taskdet">TASK DETAILS</th>
+                <th rowspan="2" id="duedate">DUEDATE</th>
+            </tr>
+            <tr>
+                <th id="tasktitle">TASK TITLE</th>
+                <th id="taskdes">TASK DESCRIPTION</th>
+            </tr>
+            <tr>
+                <td rowspan="2" id="empname">vimal</td>
+                <td id="tasktitle">Task Tracker</td>
+                <td id="taskdes">Using HTML language</td>
+                <td id="duedate">26-12-2024</td>
+            </tr>
+            <tr>
+                <td id="tasktitle">task Styler</td>
+                <td id="taskdes">Using CSS lnaguage</td>
+                <td id="duedate">27-12-2024</td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function AddDetails() {
+            const empName = document.getElementById("Emp_name").value;
+            const taskTitle = document.getElementById("Task_title").value;
+            const taskDesc = document.getElementById("Task_Desc").value;
+            const dueDate = document.getElementById("date").value;
+
+            if (!empName || !taskTitle || !taskDesc || !dueDate) {
+                alert("Please fill all the fields before assigning the task.");
+                return;
+            }
+
+            const taskTable = document.getElementById("taskTable");
+
+            const newRow = document.createElement("tr");
+            newRow.classList.add("new-row");
+
+            const nameCell = document.createElement("td");
+            const titleCell = document.createElement("td");
+            const descCell = document.createElement("td");
+            const dateCell = document.createElement("td");
+
+            nameCell.textContent = empName;
+            titleCell.textContent = taskTitle;
+            descCell.textContent = taskDesc;
+            dateCell.textContent = dueDate;
+
+            newRow.appendChild(nameCell);
+            newRow.appendChild(titleCell);
+            newRow.appendChild(descCell);
+            newRow.appendChild(dateCell);
+
+            taskTable.appendChild(newRow);
+
+            document.getElementById("Emp_name").value = "";
+            document.getElementById("Task_title").value = "";
+            document.getElementById("Task_Desc").value = "";
+            document.getElementById("date").value = "";
+        }
+    </script>
+</body>
+</html>
