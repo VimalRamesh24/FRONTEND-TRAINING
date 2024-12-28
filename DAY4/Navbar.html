@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100vw; 
+            height: 100vh; 
+            overflow: hidden; 
+        }
+
+        body {
+            font-family: "Montserrat", serif;
+            background-color: #f4f4f4; /* Optional: a light background */
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; 
+            background-color: #000;
+            padding: 10px 20px;
+        }
+
+        .navbar img {
+            height: 90px;
+            width: 120px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links div {
+            border: 2px solid #000;
+            padding: 10px 20px;
+            background: #000;
+            text-align: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .nav-links a:hover {
+            color: #cfc9c9;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <img src="images/NavImg.jpg" alt="Vimal Logo">
+        <div class="nav-links">
+            <div class="nav1"><a href="Home.html" target="Home">HOME</a></div>
+            <div class="nav2"><a href="Gallery.html" target="Home">GALLERY</a></div>
+            <div class="nav3"><a href="Message.html" target="Home">MESSAGE</a></div>
+            <div class="nav4"><a href="Events.html" target="Home">EVENTS</a></div>
+        </div>
+    </nav>
+</body>
+</html>

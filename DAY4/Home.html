@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #BirthImg {
+            margin-left: 170px;
+            width: 1100px;
+        }
+        #BirthImg2 {
+            position: absolute;
+            top: 45px;
+            left: 10px;
+            z-index: 1;
+            margin-left: 510px;
+            margin-top: 170px;
+            width: 470px;
+            height: 670px;
+        }
+        #BirthImg2:hover {
+            box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1), -10px -10px 10px white;
+        }
+        #wish-text {
+            position: absolute;
+            top: 23px;
+            left: 300px;
+            color: #008080;
+        }
+        #wish-text1 {
+            position: absolute;
+            top: 65px;
+            left: 700px;
+            font-size: large;
+            color: hsla(0, 67%, 44%, 0.5);
+        }
+        hr#new1 {
+            border-top: 2px solid rgba(0,0,0,0.5);
+            position: absolute;
+            top: 44%;
+            left: 530px;
+            width: 32%;
+            margin: 0;
+            z-index: 2;
+        }
+        hr#new2 {
+            border-top: 2px solid rgba(0,0,0,0.5);
+            position: absolute;
+            top: 39%;
+            left: 530px;
+            width: 32%;
+            margin: 0;
+            z-index: 2;
+        }
+        #head{
+            font-family:Noto Serif Display;
+            font-weight: 300;
+            font-size: 23px;
+            position: absolute;
+            top: 35%;
+            left: 660px;
+            width: 32%;
+            margin: 0;
+            z-index: 2;
+        }
+        #head2{
+            font-family:Noto Serif Display;
+            font-weight:300;
+            font-size: 11px;
+            position: absolute;
+            top: 41%;
+            left: 820px;
+            width: 32%;
+            margin: 0;
+            z-index: 2;
+        }
+        #head3{
+            font-family:Noto Serif Display;
+            font-weight: 250px;
+            font-size: 11px;
+            position: absolute;
+            top: 41%;
+            left: 540px;
+            width: 32%;
+            margin: 0;
+            z-index: 2;
+        }
+        #head4{
+            font-family: "Montserrat", serif;
+            font-weight:900;
+            font-size: 42px;
+            max-width: 17%;
+            position: absolute;
+            top: 47%;
+            line-height: 34px;
+            left: 540px;
+            width: 39%;
+            margin: 0;
+            z-index: 2;
+            color: rgba(0,0,0,0.9);
+        }
+        #head5{
+            font-family: "Montserrat", serif;
+            font-weight:900;
+            font-size: 15px;
+            max-width: 17%;
+            position: absolute;
+            top: 66%;
+            line-height: 20px;
+            left: 540px;
+            width: 39%;
+            margin: 0;
+            z-index: 2;
+            color: rgba(0,0,0,0.6);
+        }
+        #head6{
+            font-family: "Montserrat", serif;
+            font-weight:900;
+            font-size: 15px;
+            max-width: 16%;
+            position: absolute;
+            top: 72%;
+            line-height: 23px;
+            left: 540px;
+            width: 39%;
+            margin: 0;
+            z-index: 2;
+            color: rgba(0,0,0,0.4);
+        }
+        #head7{
+            font-family: "Montserrat", serif;
+            font-size: 31px;
+            font-weight: 900;
+            max-width: 21%;
+            position: absolute;
+            top: 111%;
+            line-height: 36px;
+            left: 540px;
+            width: 40%;
+            margin: 0;
+            z-index: 2;
+            color: rgba(0,0,0,0.9);
+        }
+        hr#new3 {
+            border-top: 1px solid rgb(125, 117, 117);
+            position: absolute;
+            top: 129%;
+            border-top: 2px solid rgba(0,0,0,0.5);
+            left: 530px;
+            width: 32%;
+            margin: 0;
+            z-index: 2;
+        }
+        #head8{
+            font-family: "Montserrat", serif;
+            font-weight:900;
+            font-size: 15px;
+            max-width: 17%;
+            position: absolute;
+            top: 125%;
+            line-height: 20px;
+            left: 540px;
+            width: 39%;
+            margin: 0;
+            z-index: 2;
+            color: rgba(0,0,0,0.6);
+        }
+        .vertical-hr {
+        width: 2px;
+        height: 63px;
+        background-color: black;
+        border: none;
+        margin: 0;
+        position: absolute;
+        top: 112%;
+        z-index: 2;
+        left: 805px;
+        }
+        #quote{
+            font-family: "Montserrat", serif;
+            font-weight:900;
+            font-size: 12px;
+            max-width: 17%;
+            position: absolute;
+            top: 112%;
+            line-height: 17px;
+            left: 820px;
+            width: 10%;
+            margin: 0;
+            z-index: 2;
+            color: rgba(0,0,0,0.6);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="Homepage">
+        <img id="BirthImg" src="images/BirthdayImg.webp" alt="paper image">
+        <img id="BirthImg2" src="images/paperimg.jpg" alt="Paper image 2">
+    </div>
+    <header>
+        <h1 id="wish-text">"Happy Birthday DHIYA SRI!"</h1>
+        <h4 id="wish-text1">~Celebrating DIYA's Special Day</h4>
+        <hr id="new1">
+        <hr id="new2">
+    </header>
+    <div>
+        <p id="head">The Times Of India</p>
+        <p id="head2">APRIL / SPECIAL EDITION</p>
+        <p id="head3">ISSUE 7</p>
+        <p id="head4">It's Diya's 1st Birth Day Bash!</p>
+        <p id="head5">JOIN US MONDAY!!</p>
+        <p id="head6">Dhiya Sri’s 1st birthday was a joyous affair filled with love, laughter, and magic. Family and friends gathered to celebrate her radiant smile and first milestones. The party sparkled with vibrant decor, a stunning cake, and endless cheer, making it a day to remember. Here’s to a year of joy and many more to come for our little star, Dhiya!</p>
+        <p id="head7">April 27th At The Vellore Playground</p>
+        <hr id="new3">
+        <p id="head8">PAGE 1</p>
+        <hr class="vertical-hr">
+        <p id="quote">
+            "On your special day, may happiness find its way,
+            Bringing joy and love that will forever stay!"
+        </p>
+    </div>
+
+</body>
+</html>
