@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Message</title>
     <style>
         #BirthImg {
             margin-left: 170px;
@@ -86,13 +86,167 @@
             z-index: 2;
             color: rgba(0,0,0,0.6);
         }
-
+        #check{
+            position: absolute;
+            top: 590px;
+            left: 540px;
+            z-index: 3;
+        }
+        #whatsapp-icon{
+            position: absolute;
+            top: 580px;
+            left: 565px;
+            z-index: 2;
+        }
+        .whats-wish{
+            position: absolute;
+            top: 600px;
+            left: 540px;
+            z-index: 3; 
+        }
+        #wish{
+            position: absolute; 
+            top: 573px;
+            left: 600px;
+            z-index: 3; 
+        }
+        .checkbox-container{
+            display: none;
+        }
+        #check:checked ~.checkbox-container{    
+            display: block;
+            position: absolute; 
+            top: 603px;
+            left: 550px;
+            line-height: 10px;
+            z-index: 4;
+            font-size: small;
+            font-family: 'Patrick Hand', Consolas, 'Courier New', monospace;
+        }
+        #insta-icon{
+            position: absolute;
+            top: 695px;
+            left: 565px;
+            z-index: 2;
+        }
+        #wish1{
+            position: absolute; 
+            top: 687px;
+            left: 600px;
+            z-index: 3; 
+        }
+        #check1{
+            position: absolute;
+            top: 705px;
+            left: 540px;
+            z-index: 3;
+        }
+        .checkbox2-container{
+            display: none;
+        }
+        #check1:checked ~.checkbox2-container{    
+            display: block;
+            position: absolute; 
+            top: 723px;
+            left: 550px;
+            line-height: 10px;
+            z-index: 4;
+            font-family: 'Patrick Hand', Consolas, 'Courier New', monospace;
+            font-size: small;
+        }
+        #text2{
+            font-family: "Montserrat", serif;
+            font-weight:900;
+            font-size: 50px;
+            max-width: 25%;
+            position: absolute;
+            padding-right: 20px;
+            top: 47%;
+            line-height: 40px;
+            left: 765px;
+            width: 15%;
+            margin: 0;
+            z-index: 2;
+            color: rgba(0,0,0,0.9);  
+        }
+        #foot-icon{
+            position: absolute;
+            top: 47%;
+            left: 915px;
+            z-index: 4;
+        }
+        #text3{
+            font-family: "Montserrat", serif;
+            font-weight:900;
+            font-size: 15px;
+            max-width: 15%;
+            position: absolute;
+            top: 93%;
+            line-height: 20px;
+            left: 770px;
+            width: 30%;
+            margin: 0;
+            z-index: 2;
+            color: rgba(0,0,0,0.8); 
+        }
+        #text4{
+            font-family: "Montserrat", serif;
+            font-weight:900;
+            font-size: 10px;
+            max-width: 15%;
+            position: absolute;
+            top: 100%;
+            line-height: 20px;
+            left: 770px;
+            margin-right:20px ;
+            padding-right:20px ;
+            width: 30%;
+            margin: 0;
+            z-index: 2;
+            color: rgba(0,0,0,0.6); 
+        }
+        #text5{
+            font-family: "Montserrat", serif;
+            font-weight:900;
+            font-size: 10px;
+            max-width: 15%;
+            position: absolute;
+            top: 62%;
+            line-height: 20px;
+            left: 770px;
+            margin-right:20px ;
+            padding-right:20px ;
+            width: 30%;
+            margin: 0;
+            z-index: 2;
+            color: rgba(0,0,0,0.6); 
+        }
+        #copyright{
+            position: absolute;
+            top: 1050px;
+            z-index: 2;
+            left: 550px;
+        }
+        #BirthImg3 {
+            position: absolute;
+            top: 27%;
+            left: 350px;
+            z-index: 2;
+            width: 200px;
+            height: 250px;
+            margin-left: 190px;
+            margin-top: 130px;
+        }
+        #BirthImg3:hover{
+            box-shadow: 7px 7px 6px rgba(0, 0, 0, 0.1), -5px -5px 5px white;
+        }
     </style>
 </head>
 <body>
     <div class="Homepage">
         <img id="BirthImg" src="images/BirthdayImg.webp" alt="paper image">
         <img id="BirthImg2" src="images/paperimg.jpg" alt="Paper image 2">
+        <img id="BirthImg3" src="images/diya2.jpg" alt="diya pic3">
     </div>
     <div>
         <hr id="new1">
@@ -102,7 +256,39 @@
     <div>
         <p id="head2">APRIL / SPECIAL EDITION</p>
         <p id="head3">ISSUE 7</p>
-        <p id="head8">PAGE 2</p>
+        <p id="head8">PAGE 3</p>
     </div>
+    <div>
+        <div class="whats-wish">
+        </div>
+        <label for="check"> </label>
+        <input type="checkbox" id="check" name="check" title="checkbox">
+        <img src="Icons/icon-whatsapp.png" id="whatsapp-icon" width="30px" height="30px" alt="whatsapp">
+        <p id="wish">WISHES...</p>
+        <div class="checkbox-container">
+            <p>~Happy Birthday, princess!</p>
+            <p>~Smiles & giggles, always!</p>
+            <p>~Shine bright, birthday girl!</p>
+        </div>
+    </div>
+    <div>
+        <input type="checkbox" id="check1" name="checking" title="checkbox">
+        <img src="Icons/instagram-icon.png" id="insta-icon" width="30px" height="30px" alt="whatsapp">
+        <p id="wish1">WISHES...</p>
+        <div class="checkbox2-container">
+            <p>~Shine bright, birthday girl!</p>
+            <p>~Birthday love to you!</p>
+            <p>~Happy Birthday, sweet angel!</p>
+            <p>~Happy 1st, cutie pie!</p>
+        </div>
+    </div>
+    <div>
+        <img src="Icons/foot-icon.png" id="foot-icon" height="40px" width="40px" title="foot icon">
+        <p id="text2">Diya's First Step</p>
+        <p id="text3">A day filled with love, laughter, and sweet memories</p>
+        <p id="text4">As parents, our hearts are overwhelmed with joy and gratitude as we celebrate our precious Dhiya Sri’s first birthday. This past year has been an incredible journey filled with countless smiles, tiny milestones, and cherished moments that have brought us immense happiness. Watching her grow, laugh, and explore the world around her has been nothing short of magical.</p>
+        <p id="text5">This celebration is not just a milestone for Dhiya but also for us as a family. We are grateful for the wonderful memories created today and for the love showered on our little girl. Your kind words, thoughtful wishes, and warm presence have added so much joy to her special day. As we step into another beautiful year, we carry your blessings and good wishes with us, knowing that Dhiya is surrounded by so much love.</p>
+    </div>
+    <p id="copyright"><img src="Icons/copyright-icon.png" alt="copyright" width="10px" height="10px" > newspaper was published by Vimal on 01-01-2025</p>
 </body>
 </html>
