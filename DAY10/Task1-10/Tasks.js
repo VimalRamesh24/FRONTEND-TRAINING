@@ -52,7 +52,7 @@
         largestNo = numbersArr[index];
     }
     }
-    console.log(largestNumber);
+    console.log(largestNo);
     
     // Task 7, Count Vowels in str
     function countVowelLetters(inputString) {
