@@ -171,5 +171,24 @@
     // console.log(x);
     // let y = Boolean(x);
     // console.log(y);
-
     
+    // function countAscii(str) {
+    //     let characterCount = str.length;
+    //     let asciiSum = 0;
+    //     for (let i = 0; i < str.length; i++) {
+    //         asciiSum += str.charCodeAt(i); 
+    //     }
+    //     return {  asciiSum };
+    // }
+    // let inputStr = "hello Everyone!";
+    // let result = countAscii(inputStr);
+    // console.log(`Sum of ASCII Values: ${result.asciiSum}`);
+    
+    // let num1 = Number(prompt("enter num1"));
+    // let num2 = (Number(prompt("Enter num2")));
+    // let Modnum1 = console.log(num1.charAt(0).upperCase);
+    
+    // let FirstName = "Vimal";
+    // let LastName = "Ramesh";
+    // let FirstName1 = new String ("VimalR");
+
