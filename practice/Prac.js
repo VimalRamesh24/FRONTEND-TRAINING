@@ -192,3 +192,31 @@
     // let LastName = "Ramesh";
     // let FirstName1 = new String ("VimalR");
 
+    // let sentence1 = "Welcome to pubg mobile";
+    // let modsentence = sentence1.split(" ");
+    // console.log(modsentence);
+    // let largeword = modsentence[0];
+    // for(let i= 1; i<modsentence.length;i++)
+    // {
+    //     if(modsentence[i]>modsentence[0])
+    //     {
+    //         largeword = modsentence[i];
+    //         return largeword
+
+    //     }
+    // }
+    // console.log(largeword);
+
+// var str = prompt("Enter the String") 
+// document.write(str.toUpperCase());
+// console.log()
+
+const Names = [
+    {name1:"Vimal",Id:1,dEP:"CSBS"},
+    {name1:"Suresh",Id:2,dEP:"IT"},
+    {name1:"Magesh",Id:3,dEP:"AIDS"},
+    {name1:"Ganesh",Id:4,dEP:"CSE"},
+
+    
+
+]
